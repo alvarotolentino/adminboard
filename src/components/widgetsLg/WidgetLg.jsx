@@ -2,7 +2,7 @@ import './widgetLg.css';
 
 export default function WidgetLg() {
   const Button = ({ type }) => {
-    return <button className={'widgetLgButton' + type}>{type}</button>;
+    return <button className={'widgetLgButton ' + type}>{type}</button>;
   };
   return (
     <div className='widgetLg'>
@@ -33,7 +33,7 @@ export default function WidgetLg() {
           <td className='widgetLgDate'>2 Jun 2021</td>
           <td className='widgetLgAmount'>$122.00</td>
           <td className='widgetLgStatus'>
-            <Button type='Approved' />{' '}
+            <Button type='Declined' />{' '}
           </td>
         </tr>
         <tr className='widgetLgTr'>
@@ -44,7 +44,7 @@ export default function WidgetLg() {
           <td className='widgetLgDate'>2 Jun 2021</td>
           <td className='widgetLgAmount'>$122.00</td>
           <td className='widgetLgStatus'>
-            <Button type='Approved' />{' '}
+            <Button type='Pending' />{' '}
           </td>
         </tr>
         <tr className='widgetLgTr'>
