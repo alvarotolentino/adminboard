@@ -12,6 +12,7 @@ import {
   TrendingUp,
   WorkOutline,
 } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 import './sidebar.css';
 
 export default function SideBar() {
@@ -21,10 +22,12 @@ export default function SideBar() {
         <div className='sidebarMenu'>
           <h3 className='sidebarTitle'>Dashboard</h3>
           <ul className='sidebarList'>
+            <Link to='/' className='link'>
             <li className='sidebarListItem'>
               <LineStyle className='sidebarIcon'></LineStyle>
               Home
             </li>
+            </Link>
             <li className='sidebarListItem'>
               <Timeline className='sidebarIcon'></Timeline>
               Analytics
@@ -38,14 +41,18 @@ export default function SideBar() {
         <div className='sidebarMenu'>
           <h3 className='sidebarTitle'>Quick Menu</h3>
           <ul className='sidebarList'>
-            <li className='sidebarListItem'>
-              <PersonOutline className='sidebarIcon'></PersonOutline>
-              Users
-            </li>
-            <li className='sidebarListItem'>
-              <Storefront className='sidebarIcon'></Storefront>
-              Products
-            </li>
+            <Link to='/users' className='link'>
+              <li className='sidebarListItem'>
+                <PersonOutline className='sidebarIcon'></PersonOutline>
+                Users
+              </li>
+            </Link>
+            <Link to='/products' className='link'>
+              <li className='sidebarListItem'>
+                <Storefront className='sidebarIcon'></Storefront>
+                Products
+              </li>
+            </Link>
             <li className='sidebarListItem'>
               <AttachMoney className='sidebarIcon'></AttachMoney>
               Transactions
